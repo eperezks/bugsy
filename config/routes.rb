@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get "/auth/oauth2/callback" => "auth0#callback"
   get "/auth/failure" => "auth0#failure"
 
@@ -6,7 +7,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'high_voltage/pages#show', id: 'eduardoperez.us'
+  # root 'high_voltage/pages#show', id: 'eduardoperez.us'
+  root to: 'pages#show', id: 'eduardoperez.us'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -23,10 +23,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem "font-awesome-rails"
 
+gem 'awesome_print' # so you can visually decipher objects in the rails console
+gem 'devise'
+gem "font-awesome-rails"
 gem 'omniauth-auth0'
 gem 'high_voltage'
+gem "seedbank"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

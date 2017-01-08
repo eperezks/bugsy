@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :squares, only: [:index, :create, :show],
                       shallow: true,
                       defaults: { format: :json } do
-    resources :boxes, controller: :square_boxes, only: [:create, :update]
+    resources :boxes, controller: :square_boxes, only: [:create, :update, :destroy]
   end
 
   # Example of regular route:

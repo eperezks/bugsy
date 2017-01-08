@@ -28,6 +28,7 @@ gem 'font-awesome-rails'
 gem 'omniauth-auth0'
 gem 'high_voltage'
 gem 'seedbank'
+gem 'rack-cors'
 
 # TODO :
 #
@@ -50,6 +51,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rubocop'
+  gem 'pry'
 end
 
 group :development do

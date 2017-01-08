@@ -11,38 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_170_108_054_925) do
-  create_table 'square_boxes', force: :cascade do |t|
-    t.integer 'square_id'
-    t.integer 'user_id'
-    t.integer 'x'
-    t.integer 'y'
-    t.string  'name'
+ActiveRecord::Schema.define(version: 20170108054925) do
+
+  create_table "square_boxes", force: :cascade do |t|
+    t.integer "square_id"
+    t.integer "user_id"
+    t.integer "x"
+    t.integer "y"
+    t.string  "name"
   end
 
-  create_table 'squares', force: :cascade do |t|
-    t.string   'team1'
-    t.string   'team2'
-    t.datetime 'game_time'
-    t.boolean  'locked'
+  create_table "squares", force: :cascade do |t|
+    t.string   "home"
+    t.string   "away"
+    t.datetime "game_time"
+    t.boolean  "locked"
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string   'email',                  default: '', null: false
-    t.string   'encrypted_password',     default: '', null: false
-    t.string   'reset_password_token'
-    t.datetime 'reset_password_sent_at'
-    t.datetime 'remember_created_at'
-    t.integer  'sign_in_count', default: 0, null: false
-    t.datetime 'current_sign_in_at'
-    t.datetime 'last_sign_in_at'
-    t.string   'current_sign_in_ip'
-    t.string   'last_sign_in_ip'
-    t.datetime 'created_at',                          null: false
-    t.datetime 'updated_at',                          null: false
-    t.boolean  'admin'
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.boolean  "admin"
   end
 
-  add_index 'users', ['email'], name: 'index_users_on_email', unique: true
-  add_index 'users', ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
 end

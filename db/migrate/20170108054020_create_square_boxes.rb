@@ -5,7 +5,7 @@ class CreateSquareBoxes < ActiveRecord::Migration
       t.integer :user_id
       t.integer :x
       t.integer :y
-      t.integer :name
+      t.string :name
     end
   end
 end

@@ -1,0 +1,20 @@
+#%RAML 0.8
+# Version 1.0 of RAML is not supported by Postman
+title: bugsy-api
+version: v1
+
+# Change this to rails localhost in development mode
+baseUri: http://localhost:3000
+# baseUri: https://eduardoperez.us
+protocols:
+  - HTTP
+
+# SQUARES
+/squares/{id}:
+  get:
+  post:
+
+/squares/{id}/square_boxes:
+  get:
+  patch:
+

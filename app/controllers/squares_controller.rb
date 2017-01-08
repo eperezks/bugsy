@@ -11,6 +11,6 @@ class SquaresController < ApplicationController
   end
 
   def show
-    @square = Square.find(id: params[:id])
+    @square = Square.find(params[:id])
   end
 end

@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170108054925) do
     t.integer "user_id"
     t.integer "x"
     t.integer "y"
-    t.integer "name"
+    t.string  "name"
   end
 
   create_table "squares", force: :cascade do |t|

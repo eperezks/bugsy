@@ -6,6 +6,5 @@ class SquareBoxesController < ApplicationController
   end
 
   def update
-
   end
 end

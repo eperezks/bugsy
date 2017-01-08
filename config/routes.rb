@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  get "/auth/oauth2/callback" => "auth0#callback"
-  get "/auth/failure" => "auth0#failure"
+  get '/auth/oauth2/callback' => 'auth0#callback'
+  get '/auth/failure' => 'auth0#failure'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -11,11 +11,10 @@ Rails.application.routes.draw do
   root to: 'pages#show', id: 'eduardoperez.us'
 
   resources :squares, only: [:index, :create, :show],
-            shallow: true,
-            defaults: { format: :json } do
+                      shallow: true,
+                      defaults: { format: :json } do
     resources :boxes, controller: :square_boxes, only: [:create, :update]
   end
-
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

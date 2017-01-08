@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7'
 # Use sqlite3 as the database for Active Record
@@ -23,23 +22,20 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
 gem 'awesome_print' # so you can visually decipher objects in the rails console
 gem 'devise'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 gem 'omniauth-auth0'
 gem 'high_voltage'
-gem "seedbank"
+gem 'seedbank'
 
-=begin
-TODO :
-
-rubocop
-consistency check
-db indexes
-create raml
-
-=end
+# TODO :
+#
+# rubocop
+# consistency check
+# db indexes
+# create raml
+#
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -53,6 +49,7 @@ create raml
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rubocop'
 end
 
 group :development do
@@ -62,4 +59,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-

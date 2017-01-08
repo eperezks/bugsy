@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
 
-  skip_before_filter :authenticate_user!
+  # skip_before_filter :authenticate_user!
   layout :layout_for_page
 
   private

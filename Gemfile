@@ -31,6 +31,16 @@ gem 'omniauth-auth0'
 gem 'high_voltage'
 gem "seedbank"
 
+=begin
+TODO :
+
+rubocop
+consistency check
+db indexes
+create raml
+
+=end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

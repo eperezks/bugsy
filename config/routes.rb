@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   # root 'high_voltage/pages#show', id: 'eduardoperez.us'
   root to: 'pages#show', id: 'eduardoperez.us'
 
+  resources :squares, only: [:index, :create, :show], defaults: { format: :json }
+  resources :square_boxes, only: [:index, :create, :update], defaults: { format: :json }
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

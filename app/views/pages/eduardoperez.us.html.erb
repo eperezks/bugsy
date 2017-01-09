@@ -1,18 +1,6 @@
-<!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Perez dot US</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <%= link_to t('nav.sign_out'), destroy_user_session_path, :method=>'delete' %>
 
     <body class="color-intro">
+    <%= link_to t('nav.sign_out'), destroy_user_session_path, :method=>'delete' %>
 
     <div class="pgwrap">
 
@@ -40,11 +28,3 @@
 
     </div>
     </body>
-
-
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-  </body>
-</html>

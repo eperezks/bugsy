@@ -23,13 +23,13 @@ module Bugsy
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    if Rails.env.development?
+    # if Rails.env.development?
       config.middleware.insert_before 0, 'Rack::Cors' do
         allow do
           origins '*'
           resource '*', headers: :any, methods: [:get, :post, :patch, :delete]
         end
       end
-    end
+    # end
   end
 end

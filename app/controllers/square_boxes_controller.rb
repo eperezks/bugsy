@@ -1,4 +1,3 @@
-require 'pry'
 class SquareBoxesController < ApplicationController
   respond_to :json
   before_action :load_box, only: [:update, :destroy]
@@ -25,7 +24,7 @@ class SquareBoxesController < ApplicationController
   end
 
   def update_params
-    p = params.permit(:name).merge({user_id: current_user.try(:id)})
+    p = params.permit(:name).merge(user_id: current_user.try(:id))
   end
 
   def destroy_params

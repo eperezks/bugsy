@@ -2,7 +2,7 @@ class SquaresController < ApplicationController
   respond_to :json
 
   def index
-    @squares = Square.all.order(game_time: :asc)
+    @squares = Square.all.order(id: :asc)
   end
 
   def create
